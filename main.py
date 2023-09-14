@@ -20,17 +20,18 @@ wait = WebDriverWait(driver, 600)  # Adjust the timeout as needed
 # Define attributes of the span element
 span_attributes = {
     "dir": "auto",
-    "title": "GIBB Timo",
+    "title": input("add nae of your friend: "),
 }
 
 # Wait for the span element to become present in the DOM
 span_element = wait.until(EC.presence_of_element_located((By.XPATH, f'//span[@dir="{span_attributes["dir"]}"][@title="{span_attributes["title"]}"]')))
 span_element.click()
 
+text_to_spam = input("what message you want to spam: ")
+
 while True:
 
-    custom_input_text = "timoooooooooo"
-    driver.switch_to.active_element.send_keys(custom_input_text)
+    driver.switch_to.active_element.send_keys(text_to_spam)
     driver.switch_to.active_element.send_keys(Keys.RETURN)
     random_float = random.uniform(0.1, 1)
     time.sleep(0)
