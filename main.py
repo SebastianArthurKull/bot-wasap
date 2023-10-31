@@ -20,7 +20,7 @@ wait = WebDriverWait(driver, 600)  # Adjust the timeout as needed
 # Define attributes of the span element
 span_attributes = {
     "dir": "auto",
-    "title": input("add nae of your friend: "),
+    "title": input("add name of your friend: "),
 }
 
 # Wait for the span element to become present in the DOM
